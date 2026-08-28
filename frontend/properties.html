@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Full list of luxury villas, penthouses and apartments from Nematollahi Estates in Tehran and the north">
+  <meta name="robots" content="index, follow">
+  <title>All Properties | Nematollahi Estates</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo-clean.png" alt="Nematollahi Estates">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="properties.html" class="is-active">Properties</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="index.html#agents">Agents</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="index.html#contact" class="btn btn-gold btn-sm">Free Consultation</a>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Properties</span>
+    </div>
+    <h1>All Luxury Properties</h1>
+    <p>Selected villas, penthouses and apartments in Tehran and the north</p>
+  </div>
+</div>
+
+<section class="section" style="padding-top:2.5rem">
+  <div class="container">
+    <div class="filter-bar">
+      <div class="search-row">
+        <div class="field">
+          <label>Location</label>
+          <select id="fLoc">
+            <option value="">All Areas</option>
+            <option value="saadatabad">Saadatabad</option>
+            <option value="farmanieh">Farmanieh</option>
+            <option value="niavaran">Niavaran</option>
+            <option value="elahieh">Elahieh</option>
+            <option value="zaferanieh">Zaferanieh</option>
+            <option value="north">North (Chalus / Ramsar)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Property Type</label>
+          <select id="fType">
+            <option value="">All Types</option>
+            <option value="villa">Villa</option>
+            <option value="penthouse">Penthouse</option>
+            <option value="apartment">Luxury Apartment</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Min Price</label>
+          <select id="fMin">
+            <option value="">No Limit</option>
+            <option value="20">20 Billion</option>
+            <option value="50">50 Billion</option>
+            <option value="100">100 Billion</option>
+            <option value="200">200 Billion</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Max Price</label>
+          <select id="fMax">
+            <option value="">No Limit</option>
+            <option value="50">50 Billion</option>
+            <option value="100">100 Billion</option>
+            <option value="200">200 Billion</option>
+            <option value="500">500 Billion</option>
+          </select>
+        </div>
+        <button class="search-go" id="filterBtn">Apply Filters</button>
+      </div>
+    </div>
+
+    <div class="props-grid" id="propsGrid"></div>
+    <p id="resultCount" style="text-align:center;margin-top:2rem;color:var(--text-2);font-size:0.95rem"></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="images/logo-clean.png" alt="Nematollahi Estates"></a>
+        <p>Specialized services for buying, selling and renting luxury properties in Tehran and the north of Iran, with over 14 years of experience.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="properties.html">Featured Properties</a>
+          <a href="index.html#categories">Categories</a>
+          <a href="index.html#agents">Agents</a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="properties.html?type=villa">Buy a Villa</a>
+          <a href="properties.html">Sell a Property</a>
+          <a href="properties.html">Luxury Rentals</a>
+          <a href="index.html#contact">Investment Advice</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><span>📍</span><span>Tehran, Elahieh, Fereshteh St., No. 28</span></li>
+          <li><span>📞</span><span>+98 21 2200 9876</span></li>
+          <li><span>📱</span><span>+98 912 123 4567</span></li>
+          <li><span>✉️</span><span>hello@nematollahiestates.com</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div>© 2026 Nematollahi Estates. All rights reserved.</div>
+      <div class="socials">
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Telegram">✈️</a>
+        <a href="#" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/listings.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Desk | Nematollahi Estates</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header is-scrolled" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo-clean.png" alt="Nematollahi Estates">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">View site</a>
+    </nav>
+    <div class="header-cta">
+      <button class="btn btn-line btn-sm" id="logoutBtn" type="button">Sign out</button>
+    </div>
+  </div>
+</header>
+
+<section class="section admin-wrap">
+  <div class="container">
+    <div id="loginPanel" class="admin-card">
+      <h1>Advisor desk</h1>
+      <p>Sign in to manage listings and incoming requests.</p>
+      <form id="loginForm" class="inquiry-form">
+        <input id="adminPassword" type="password" required placeholder="Password">
+        <button class="btn btn-gold" type="submit">Sign in</button>
+        <p class="form-status" data-form-status></p>
+      </form>
+    </div>
+
+    <div id="deskPanel" hidden>
+      <div class="section-head" style="text-align:left;margin-bottom:2rem">
+        <div class="section-tag">Inventory</div>
+        <h1 class="section-title">Listings desk</h1>
+      </div>
+      <div class="admin-grid">
+        <form id="createForm" class="inquiry-form admin-card">
+          <h2>New listing</h2>
+          <input name="title" required placeholder="Title">
+          <input name="location" required placeholder="Location label">
+          <select name="locationKey" required>
+            <option value="saadatabad">Saadatabad</option>
+            <option value="farmanieh">Farmanieh</option>
+            <option value="niavaran">Niavaran</option>
+            <option value="elahieh">Elahieh</option>
+            <option value="zaferanieh">Zaferanieh</option>
+            <option value="north">North</option>
+          </select>
+          <select name="type" required>
+            <option value="villa">Villa</option>
+            <option value="penthouse">Penthouse</option>
+            <option value="apartment">Apartment</option>
+          </select>
+          <div class="form-row">
+            <input name="price" type="number" min="0" step="0.1" required placeholder="Price number">
+            <input name="priceText" required placeholder="Price label">
+          </div>
+          <div class="form-row">
+            <input name="beds" type="number" min="0" required placeholder="Beds">
+            <input name="baths" type="number" min="0" required placeholder="Baths">
+            <input name="area" type="number" min="0" required placeholder="Area m²">
+          </div>
+          <input name="badge" placeholder="Badge (optional)">
+          <input name="image" required placeholder="Image path, e.g. /images/villa1.jpg">
+          <textarea name="desc" rows="4" required placeholder="Description"></textarea>
+          <label class="check-line"><input name="featured" type="checkbox"> Featured</label>
+          <button class="btn btn-gold" type="submit">Publish</button>
+          <p class="form-status" data-form-status></p>
+        </form>
+        <div>
+          <div class="admin-card">
+            <h2>Current listings</h2>
+            <div id="adminList"></div>
+          </div>
+          <div class="admin-card" style="margin-top:1.25rem">
+            <h2>Inquiries</h2>
+            <div id="inquiryList"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
