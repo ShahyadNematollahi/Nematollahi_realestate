@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nematollahi Estates — Luxury villas and properties in Tehran and the north. Buy and sell villas, penthouses and premium apartments.">
+  <meta name="robots" content="index, follow">
+  <title>Nematollahi Estates | Luxury Villas & Properties in Tehran & North</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo-clean.png" alt="Nematollahi Estates">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="is-active">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="index.html#categories">Categories</a>
+      <a href="index.html#agents">Agents</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="index.html#contact" class="btn btn-gold btn-sm">Free Consultation</a>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-media">
+    <img src="images/hero.jpg" alt="Luxury villa" loading="eager">
+    <div class="hero-shade"></div>
+  </div>
+  <div class="container hero-body">
+    <div class="hero-pill">✦ For discerning investors and buyers</div>
+    <h1 class="hero-title">Luxury Villas & Properties<br><em>Selected by Nematollahi</em></h1>
+    <p class="hero-lead">A curated collection of the finest villas, penthouses and luxury apartments in the best locations across Tehran and the north of Iran</p>
+    <div class="search-panel">
+      <form class="search-row" action="properties.html" method="get">
+        <div class="field">
+          <label>Location</label>
+          <select name="loc">
+            <option value="">All Areas</option>
+            <option value="saadatabad">Saadatabad</option>
+            <option value="farmanieh">Farmanieh</option>
+            <option value="niavaran">Niavaran</option>
+            <option value="elahieh">Elahieh</option>
+            <option value="zaferanieh">Zaferanieh</option>
+            <option value="north">North (Chalus / Ramsar)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Property Type</label>
+          <select name="type">
+            <option value="">All Types</option>
+            <option value="villa">Villa</option>
+            <option value="penthouse">Penthouse</option>
+            <option value="apartment">Luxury Apartment</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Min Price</label>
+          <select name="min">
+            <option value="">No Limit</option>
+            <option value="20">20 Billion</option>
+            <option value="50">50 Billion</option>
+            <option value="100">100 Billion</option>
+            <option value="200">200 Billion</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Max Price</label>
+          <select name="max">
+            <option value="">No Limit</option>
+            <option value="50">50 Billion</option>
+            <option value="100">100 Billion</option>
+            <option value="200">200 Billion</option>
+            <option value="500">500 Billion</option>
+          </select>
+        </div>
+        <button type="submit" class="search-go">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.656a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+          Search
+        </button>
+      </form>
+    </div>
+    <div class="hero-metrics">
+      <div class="metric"><strong id="metricListings">—</strong><span>Active Luxury Listings</span></div>
+      <div class="metric"><strong id="metricDeals">—</strong><span>Successful Deals</span></div>
+      <div class="metric"><strong id="metricYears">—</strong><span>Years of Experience</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="properties">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Featured Properties</div>
+      <h2 class="section-title">Handpicked <span>for You</span></h2>
+      <p class="section-desc">Villas and apartments carefully selected with high standards of quality and design</p>
+    </div>
+    <div class="props-grid" id="propsGrid"></div>
+    <div style="text-align:center;margin-top:3rem" class="reveal">
+      <a href="properties.html" class="btn btn-line">View All Properties</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Categories</div>
+      <h2 class="section-title">Find by <span>Your Taste</span></h2>
+      <p class="section-desc">From modern villas to distinctive penthouses in the heart of Tehran</p>
+    </div>
+    <div class="cats-grid">
+      <a href="properties.html?type=villa" class="cat reveal">
+        <img src="images/villa3.jpg" alt="Villa" loading="lazy">
+        <div class="cat-veil"><div class="cat-name">Luxury Villas</div><div class="cat-count" id="countVilla"></div></div>
+      </a>
+      <a href="properties.html?type=penthouse" class="cat reveal">
+        <img src="images/villa8.jpg" alt="Penthouse" loading="lazy">
+        <div class="cat-veil"><div class="cat-name">Penthouses</div><div class="cat-count" id="countPenthouse"></div></div>
+      </a>
+      <a href="properties.html?type=apartment" class="cat reveal">
+        <img src="images/apartment1.jpg" alt="Apartment" loading="lazy">
+        <div class="cat-veil"><div class="cat-name">Luxury Apartments</div><div class="cat-count" id="countApartment"></div></div>
+      </a>
+      <a href="properties.html" class="cat reveal">
+        <img src="images/interior1.jpg" alt="Duplex" loading="lazy">
+        <div class="cat-veil"><div class="cat-name">Duplex & Triplex</div><div class="cat-count" id="countDuplex"></div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Why Us</div>
+      <h2 class="section-title">Feel the <span>Difference</span></h2>
+      <p class="section-desc">Services delivered only at the luxury level</p>
+    </div>
+    <div class="feats-grid">
+      <div class="feat reveal">
+        <div class="feat-icon">◆</div>
+        <h3>Exclusive Selection</h3>
+        <p>Every property in our portfolio is carefully chosen by our expert team against strict quality criteria.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="feat-icon">◈</div>
+        <h3>Investment Guidance</h3>
+        <p>Market analysis, price trend insights and advice aimed at the best returns in the luxury segment.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="feat-icon">◇</div>
+        <h3>Full Support</h3>
+        <p>From private viewings to contract preparation and key handover, we stay with you at every step.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="agents" style="background:var(--bg-2)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Our Team</div>
+      <h2 class="section-title">Expert <span>Advisors</span></h2>
+      <p class="section-desc">People who truly understand the luxury property market</p>
+    </div>
+    <div class="agents-grid" id="agentsGrid"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-tag">Client Stories</div>
+      <h2 class="section-title">What Clients Say <span>About Us</span></h2>
+    </div>
+    <div class="quotes-grid">
+      <div class="quote reveal">
+        <p>Buying our villa in Chalus with the Nematollahi team was completely professional and stress-free. From day one to key handover, everything was clear and well organized.</p>
+        <div class="quote-who">
+          <div class="quote-av">M.K</div>
+          <div><strong>Mehrdad Kazemi</strong><span>Villa Buyer — Chalus</span></div>
+        </div>
+      </div>
+      <div class="quote reveal">
+        <p>I was looking for a distinctive penthouse in Farmanieh. Their advisors understood exactly what I needed and suggested options I hadn’t even found myself.</p>
+        <div class="quote-who">
+          <div class="quote-av">N.R</div>
+          <div><strong>Nastaran Rafiei</strong><span>Penthouse Buyer — Farmanieh</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-wrap" id="contact">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Ready to Find Your Dream Home?</h2>
+      <p>Leave your details or send a message. An advisor will follow up with no obligation.</p>
+      <form class="inquiry-form inquiry-form-cta" id="inquiryForm">
+        <div class="form-row">
+          <input name="name" required placeholder="Full name">
+          <input name="phone" required placeholder="Phone">
+        </div>
+        <input name="email" type="email" placeholder="Email (optional)">
+        <textarea name="message" required rows="4" placeholder="What kind of property are you looking for?"></textarea>
+        <button type="submit" class="btn btn-gold">Request a callback</button>
+        <p class="form-status" data-form-status></p>
+      </form>
+      <div class="cta-actions">
+        <a href="tel:+989121234567" class="btn btn-gold" data-agency-phone>Call Directly</a>
+        <a href="https://wa.me/989121234567" target="_blank" class="btn btn-line" data-agency-wa>Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="images/logo-clean.png" alt="Nematollahi Estates"></a>
+        <p>Specialized services for buying, selling and renting luxury properties in Tehran and the north of Iran, with over 14 years of experience.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="properties.html">Featured Properties</a>
+          <a href="index.html#categories">Categories</a>
+          <a href="index.html#agents">Agents</a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="properties.html?type=villa">Buy a Villa</a>
+          <a href="properties.html">Sell a Property</a>
+          <a href="properties.html">Luxury Rentals</a>
+          <a href="index.html#contact">Investment Advice</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><span>📍</span><span data-agency-address>Tehran, Elahieh, Fereshteh St., No. 28</span></li>
+          <li><span>📞</span><span data-agency-phone-label>+98 21 2200 9876</span></li>
+          <li><span>📱</span><span data-agency-mobile-label>+98 912 123 4567</span></li>
+          <li><span>✉️</span><span data-agency-email>hello@nematollahiestates.com</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div>© 2026 Nematollahi Estates. All rights reserved.</div>
+      <div class="socials">
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Telegram">✈️</a>
+        <a href="#" title="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/989121234567" target="_blank" class="wa-float" title="WhatsApp" data-agency-wa>
+  <svg width="26" height="26" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 1 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.78-.114.133-.228.148-.425.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.906.129 1.247.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+</a>
+
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
